@@ -1,0 +1,26 @@
+sign.up: sign up
+sign.in: sign in
+sign.out: sign out
+sign.mail: email
+sign.hide.mail: email
+sign.pswd: password
+sign.confirm: confirmation
+sign.must.confirm: plz confirm
+sign.mail.error: write an email
+sign.pswd.error: write a password
+sign.wrong.pswd.error: password must be 8 caracters.
+add.title: add
+add.confirm: confirm
+add.cancel: cancel
+add.label.title: title of event
+add.label.hide.title: title
+add.label.describe: description
+add.label.hide.describe: description
+add.label.start.time: start
+add.label.hide.start.time: start
+add.label.end.time: end
+add.label.hide.end.time: end
+add.error.title: type a title
+add.error.describe: type a description
+add.error.starttime: type a start of time
+add.error.endtime: type a end of time

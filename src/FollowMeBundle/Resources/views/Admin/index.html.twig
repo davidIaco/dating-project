@@ -1,0 +1,24 @@
+{% extends "@FollowMeBundle/Resources/views/base.html.twig" %}
+
+{% block title %}admin{% endblock %}
+
+{% block body %}
+<h1>Admin</h1>
+
+{% for user in users %}
+
+<div>
+{{ user.getUserId() }}
+{{ user.getUserMail() }}
+<a class="btn btn-warning glyphicon glyphicon-ban-circle"></a>
+
+{% if is_granted('ROLE_SUPER_ADMIN') %}
+<a href="{{ path('admin_user', {'id': user.getUserId() }) }}" class="btn btn-danger glyphicon glyphicon-remove"></a>
+</div>
+{% endif %}
+{% endfor %}
+{% set results = users %}
+
+{% include "@FollowMeBundle/Resources/views/ui/pages.html.twig" %}
+
+{% endblock %}

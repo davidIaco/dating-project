@@ -1,0 +1,21 @@
+
+<div class="input-group">
+	{{ form_label(form.user_mail) }}
+	{{ form_errors(form.user_mail) }}
+ </div>
+ 
+<div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    {{ form_widget(form.user_mail) }}
+ </div>
+ 
+ <div class="input-group">
+	{{ form_label(form.user_pswd) }}
+	{{ form_errors(form.user_pswd) }}
+ </div>
+  
+ <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    {{ form_widget(form.user_pswd) }}
+ </div>
+ 

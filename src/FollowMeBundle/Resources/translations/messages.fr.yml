@@ -1,0 +1,26 @@
+sign.up: insciption
+sign.in: connexion
+sign.out: deconnection
+sign.mail: adresse mail
+sign.hide.mail: adresse mail
+sign.pswd: mot de passe
+sign.confirm: confirmation
+sign.must.confirm: Veuillez confirmer
+sign.mail.error: Veuillez saisir l'email
+sign.pswd.error: Veuillez saisir un mot de passe
+sign.wrong.pswd.error: Le mot de passe doit contenir au moins 8 caractères.
+add.title: ajout d'evenement
+add.confirm: valider
+add.cancel: annuler
+add.label.title: titre du dating
+add.label.hide.title: titre
+add.label.describe: description
+add.label.hide.describe: description
+add.label.start.time: debut
+add.label.hide.start.time: debut
+add.label.end.time: fin
+add.label.hide.end.time: fin
+add.error.title: veuillez entrer un titre
+add.error.describe: veuillez entre une description
+add.error.starttime: entrer une heure de debut
+add.error.endtime: entrer une heure de fin

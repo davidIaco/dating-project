@@ -1,0 +1,23 @@
+
+<div class="col-xs-6">
+
+<p>
+    Publiez une sortie
+</p>
+
+{% if (app.session.get("id")) %}
+<a class="btn btn-success" href="{{ path('dating') }}">Dating</a>
+<a class="btn btn-info glyphicon glyphicon-plus" href="{{ path('add') }}"></a>
+
+{% else %}
+
+<a class="btn btn-success" href="{{ path('signup') }}">{{ "sign.up"|trans|capitalize }}</a>
+<a class="btn btn-success" href="{{ path('signin') }}">{{ "sign.in"|trans|capitalize }}</a>
+
+{% endif %}
+</div>
+
+<div class="col-xs-6">
+    <img src="{{ asset('bundles/followme/images/image.jpg') }}" />
+
+</div>

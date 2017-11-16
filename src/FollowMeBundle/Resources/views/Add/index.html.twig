@@ -1,0 +1,23 @@
+{% extends "@FollowMeBundle/Resources/views/base.html.twig" %}
+
+{% block title %}Add{% endblock %}
+
+{% block body %}
+
+<h1>{{"add.title"|trans|capitalize}}</h1>
+
+{{ form_start(form, {"attr": { "novalidate": "novalidate" }} ) }}
+
+{% include "@FollowMeBundle/Resources/views/form/sign_errors.html.twig" %}
+
+{% include "@FollowMeBundle/Resources/views/form/input/add.html.twig" %}
+
+<br>
+<div class="input-form">
+<button class="btn btn-success">{{"add.confirm"|trans|capitalize}}</button>
+<button class="btn btn-success">{{"add.cancel"|trans|capitalize}}</button>
+</div>
+
+{{ form_end(form) }}
+
+{% endblock %}

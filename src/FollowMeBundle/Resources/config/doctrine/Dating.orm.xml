@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="FollowMeBundle\Entity\Dating" table="dating">
+    <unique-constraints>
+      <unique-constraint name="user_id" columns="user_id"/>
+    </unique-constraints>
+    <id name="datingId" type="integer" column="dating_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="datingDescription" type="text" column="dating_description" length="65535" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="datingTitle" type="string" column="dating_title" length="64" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="datingStart" type="integer" column="dating_start" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="datingEnd" type="integer" column="dating_end" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="datingLat" type="float" column="dating_lat" precision="10" scale="0" nullable="true"/>
+    <field name="datingLng" type="float" column="dating_lng" precision="10" scale="0" nullable="true"/>
+    <field name="datingLinkHref" type="integer" column="dating_link_href" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="datingLinkTitle" type="integer" column="dating_link_title" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="user" target-entity="User" fetch="LAZY">
+      <join-columns>
+        <join-column name="user_id" referenced-column-name="user_id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

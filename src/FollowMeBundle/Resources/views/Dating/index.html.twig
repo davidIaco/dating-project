@@ -1,0 +1,19 @@
+{% extends "@FollowMeBundle/Resources/views/base.html.twig" %}
+
+{% block title %}dating{% endblock %}
+
+{% block body %}
+<h1>Dating</h1>
+
+{% for date in dating %}
+
+<div>
+{{ date.getDatingTitle() }}
+{{ date.getDatingDescription() }}
+</div>
+
+{% endfor %}
+{% set results = dating %}
+{% include "@FollowMeBundle/Resources/views/ui/pages.html.twig" %}
+
+{% endblock %}

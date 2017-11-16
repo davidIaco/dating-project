@@ -1,0 +1,6 @@
+.settings/
+vendor/
+.buildpath
+.project
+web/bundles/node_modules/
+src/FollowMeBundle/Resources/public/node_modules/

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/followme/node_modules/bootstrap/dist/css/bootstrap.css') }}" />
+    </head>
+    <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+             <div class="navbar-header">
+                <a class="navbar-brand" href="{{ path('main') }}">Follow me</a>
+        </div>
+    <ul class="nav navbar-nav navbar-right">
+    {% if (app.session.get("id")) %}
+      
+      <li><a class="nav-item nav-link active" href="{{ path('admin') }}">admin</a></li>
+      <li><a class="nav-item nav-link active" href="{{ path('dating') }}">dating</a></li>
+      <li><a class="nav-item nav-link" href="{{ path('add') }}">add</a></li>
+      <li><a href="{{ path('signout') }}">{{ "sign.out"|trans|capitalize }}</a></li>
+
+    {% else %} 
+
+      <li><a href="{{ path('signup') }}">{{ "sign.up"|trans|capitalize }}</a></li>
+      <li><a href="{{ path('signin') }}">{{ "sign.in"|trans|capitalize }}</a></li>
+
+    {% endif %}        
+    </ul>
+  </div>
+</nav>  
+    	<main class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+        {% block body %}{% endblock %}
+        </main>
+        
+        {% block javascripts %}{% endblock %}
+        
+        <script type="text/javascript" src="{{ asset('bundles/followme/node_modules/bootstrap/dist/js/bootstrap.js') }}"></script>
+        
+    </body>
+</html>
