@@ -30,10 +30,10 @@ First Sign up to join the community. Fill the form :
 
 To add en event :
 
-Title : find a short name to understand
-Description: explain the activity
-Select the date and time start
-Select a duration
+Title : find a short name to understand. 
+Description: explain the activity. 
+Select the date and time start. 
+Select a duration. 
 
 
 
